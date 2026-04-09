@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+printf '%s\n' bash
+printf '%s\n' curl
+printf '%s\n' tar
+printf '%s\n' git
+printf '%s\n' cargo
+printf '%s\n' go

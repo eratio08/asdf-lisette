@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+printf '%s\n' 'Lisette is a little language inspired by Rust that compiles to Go. This plugin installs Lisette from upstream tagged source releases and exposes the lis CLI through asdf.'

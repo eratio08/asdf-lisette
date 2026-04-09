@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+printf '%s\n' 'Plugin Repository: https://github.com/eratio08/asdf-lisette'
+printf '%s\n' 'Lisette Website: https://lisette.run'
+printf '%s\n' 'Lisette Repository: https://github.com/ivov/lisette'
+printf '%s\n' 'asdf Plugin Author Guide: https://asdf-vm.com/plugins/create.html'

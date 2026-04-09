@@ -2,7 +2,7 @@
 
 # asdf-lisette [![Build](https://github.com/eratio08/asdf-lisette/actions/workflows/build.yml/badge.svg)](https://github.com/eratio08/asdf-lisette/actions/workflows/build.yml) [![Lint](https://github.com/eratio08/asdf-lisette/actions/workflows/lint.yml/badge.svg)](https://github.com/eratio08/asdf-lisette/actions/workflows/lint.yml)
 
-[lisette](lisette.run) plugin for the [asdf version manager](https://asdf-vm.com).
+[Lisette](https://lisette.run) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -10,15 +10,19 @@
 
 - [Dependencies](#dependencies)
 - [Install](#install)
+- [Help](#help)
+- [Binary Releases](#binary-releases)
 - [Contributing](#contributing)
 - [License](#license)
 
 # Dependencies
 
-**TODO: adapt this section**
-
-- `bash`, `curl`, `tar`, and [POSIX utilities](https://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html).
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
+- `bash`, `curl`, `tar`, `git`, and standard POSIX utilities.
+- [Rust and Cargo](https://rustup.rs/).
+Lisette currently builds from source, and upstream requires Rust 1.94 at the time of writing.
+- [Go](https://go.dev/dl/) 1.25 or newer.
+This matches Lisette's upstream requirements.
+- Optional: `GITHUB_API_TOKEN` to avoid GitHub API rate limits when listing or resolving versions in CI.
 
 # Install
 
@@ -45,6 +49,25 @@ asdf global lisette latest
 # Now lisette commands are available
 lis --help
 ```
+
+This plugin currently installs Lisette from tagged source releases.
+Upstream GitHub releases do not yet publish prebuilt CLI assets.
+
+# Help
+
+```shell
+asdf help lisette
+```
+
+# Binary Releases
+
+When Lisette starts publishing OS and architecture specific release assets, this plugin should switch `bin/download` to fetch those binaries directly.
+
+The intended future flow is:
+
+- `bin/download` selects an asset for the current platform.
+- `bin/install` unpacks or copies `lis` into `$ASDF_INSTALL_PATH/bin`.
+- Source builds remain as a fallback until binary coverage is complete.
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
 install & manage versions.
