@@ -104,7 +104,6 @@ install_version() {
 	fi
 
 	command -v cargo >/dev/null 2>&1 || fail "cargo is required to build lisette from source"
-	command -v go >/dev/null 2>&1 || fail "go is required to build lisette from source"
 
 	resolved_version="$(resolve_version "$install_type" "$version")"
 	[ -n "$resolved_version" ] || fail "Could not resolve $version to a Lisette release"

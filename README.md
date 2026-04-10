@@ -20,8 +20,7 @@
 - `bash`, `curl`, `tar`, `git`, and standard POSIX utilities.
 - [Rust and Cargo](https://rustup.rs/).
 Lisette currently builds from source, and upstream requires Rust 1.94 at the time of writing.
-- [Go](https://go.dev/dl/) 1.25 or newer.
-This matches Lisette's upstream requirements.
+- The plugin install path builds the `lis` CLI from source and currently only requires Cargo/Rust.
 - Optional: `GITHUB_API_TOKEN` to avoid GitHub API rate limits when listing or resolving versions in CI.
 
 # Install
