@@ -16,6 +16,10 @@ jobs:
           - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@v1
+        with:
+          toolchain: 1.94.1
       - name: asdf_plugin_test
         uses: asdf-vm/actions/plugin-test@v4
         with:
